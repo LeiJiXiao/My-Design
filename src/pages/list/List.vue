@@ -3,11 +3,11 @@
         <Header></Header>
         <div class="container">
             <Menu :route="menuList"></Menu>
-            <template v-if="currentName === 'dialog'">
+            <template v-if="name === 'dialog'">
                 <DialogPreview></DialogPreview>
             </template>
-            <template v-if="currentName === 'chart'">
-                2
+            <template v-if="name === 'chart'">
+                <ChartPreview></ChartPreview>
             </template>
         </div>
     </div>
@@ -17,13 +17,15 @@
     import Header from '@/components/Header';
     import Menu from '@/components/Menu';
     import DialogPreview from './DialogPreview';
+    import ChartPreview from './ChartPreview';
 
 
     export default {
         components: {
             Header,
             Menu,
-            DialogPreview
+            DialogPreview,
+            ChartPreview
         },
         props: {
             name: {
@@ -45,9 +47,6 @@
             }
         },
         computed: {
-            currentName() {
-                return this.$route.params.name;
-            }
         },
         mounted() {
         }

@@ -134,7 +134,7 @@
     }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
     .comp-desc-box, .use-desc-box {
         margin-bottom: 50px;
     .name {

@@ -67,8 +67,4 @@
         display: flex;
         padding: 0 10px;
     }
-
-    .container {
-        flex: 1;
-    }
 </style>

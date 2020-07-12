@@ -176,6 +176,10 @@
 </script>
 
 <style lang="scss" scoped>
+    .comp-list {
+        flex: 1;
+    }
+
     .comp-desc-box,
     .use-desc-box {
         margin-bottom: 50px;

@@ -17,7 +17,6 @@
 
 <style>
     #app {
-        /* margin: 0 10%; */
         color: #2c3e50;
         font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, SimSun, sans-serif;
         -webkit-font-smoothing: antialiased;

@@ -1,24 +1,24 @@
 const dialogDemoCode1 = '<template>\n' +
-        '    <Dialog title="提示"\n' +
-        '            :visible.sync="dialogVisible"\n' +
-        '    >\n' +
-        '        <span>显示默认对话框!!</span>\n' +
-        '    </Dialog>\n' +
-        '</template>\n' +
-        '\n' +
-        '<script>\n' +
-        '    export default {\n' +
-        '        data() {\n' +
-        '            return {\n' +
-        '                dialogVisible: false\n' +
-        '            }\n' +
-        '        }\n' +
-        '    }\n' +
-        '</script>\n' +
-        '\n' +
-        '<style scope>\n' +
-        '    \n' +
-        '</style>';
+    '    <Dialog title="提示"\n' +
+    '            :visible.sync="dialogVisible"\n' +
+    '    >\n' +
+    '        <span>显示默认对话框!!</span>\n' +
+    '    </Dialog>\n' +
+    '</template>\n' +
+    '\n' +
+    '<script>\n' +
+    '    export default {\n' +
+    '        data() {\n' +
+    '            return {\n' +
+    '                dialogVisible: false\n' +
+    '            }\n' +
+    '        }\n' +
+    '    }\n' +
+    '</script>\n' +
+    '\n' +
+    '<style scope>\n' +
+    '    \n' +
+    '</style>';
 
 const dialogDemoCode2 = '<template>\n' +
     '    <Dialog title="提示"\n' +

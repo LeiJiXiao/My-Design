@@ -2,7 +2,9 @@
     <div>
         <div class="clearfix header">
             <div class="title">
-                <h2>Bnt Design</h2>
+                <h2>
+                    <router-link to="/index">ND Design</router-link>
+                </h2>
             </div>
             <div class="fr nav">
                 <router-link to="/index" v-slot="{ href, route, navigate, isActive }">
@@ -37,7 +39,10 @@
     }
 
     .title {
-        color: #409EFF;
+        a {
+            text-decoration: none;
+            color: #409EFF;
+        }
     }
 
     .nav-item {

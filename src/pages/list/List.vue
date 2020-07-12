@@ -3,10 +3,10 @@
         <Header></Header>
         <div class="container">
             <Menu :route="menuList"></Menu>
-            <template v-if="currentName === 'dialog'">
+            <template v-if="name === 'dialog'">
                 <DialogPreview></DialogPreview>
             </template>
-            <template v-if="currentName === 'chart'">
+            <template v-if="name === 'chart'">
                 <ChartPreview></ChartPreview>
             </template>
         </div>
@@ -47,12 +47,12 @@
             }
         },
         computed: {
-            currentName() {
+            /*currentName() {
                 return this.$route.params.name || 'dialog';
-            }
+            }*/
         },
         mounted() {
-            console.log(this.$route.params)
+            console.log(this.name)
         }
     }
 </script>

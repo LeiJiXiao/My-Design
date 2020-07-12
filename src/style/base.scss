@@ -1,0 +1,17 @@
+.fl {
+  float: left;
+}
+.fr {
+  float: right !important;
+}
+.clearfix {
+  &:after, &:before {
+    content: '';
+    display: block;
+    clear: both;
+    zoom: 1;
+  }
+  *{
+    float: left;
+  }
+}

@@ -94,7 +94,10 @@ const dialogDemoCode4 = '<template>\n' +
     '</style>';
 
 const chartDemoCode1 = '<template>\n' +
-    '    <Chart :chartOptions="chartOptions" />\n' +
+    '    <div>\n' +
+    '        <div>\n' +
+    '            <Chart :chartOptions="chartOptions" />\n' +
+    '        </div>\n' +
     '</template>\n' +
     '\n' +
     '<script>\n' +
@@ -102,26 +105,13 @@ const chartDemoCode1 = '<template>\n' +
     '        data() {\n' +
     '            return {\n' +
     '                chartOptions: {\n' +
-    '                    xAxis: {\n' +
-    '                        data: [\'衬衫\', \'羊毛衫\', \'雪纺衫\', \'裤子\', \'高跟鞋\', \'袜子\'],\n' +
-    '                    },\n' +
-    '                    yAxis: {},\n' +
-    '                    series: [\n' +
-    '                        {\n' +
-    '                            name: \'销量\',\n' +
-    '                            type: \'bar\',\n' +
-    '                            data: [10, 20, 36, 10, 10, 20],\n' +
-    '                        },\n' +
-    '                    ],\n' +
+    '                    xAxis: [\'衬衫\', \'羊毛衫\', \'雪纺衫\', \'裤子\', \'高跟鞋\', \'袜子\'],\n' +
+    '                    series: [10, 20, 36, 10, 10, 20],\n' +
     '                }\n' +
     '            }\n' +
     '        }\n' +
     '    }\n' +
-    '</script>\n' +
-    '\n' +
-    '<style scope>\n' +
-    '\n' +
-    '</style>';
+    '</script>';
 
 const chartDemoCode2 = '<template>\n' +
     '    <div>\n' +
@@ -141,73 +131,33 @@ const chartDemoCode2 = '<template>\n' +
     '        data() {\n' +
     '            return {\n' +
     '                chartOptions: {\n' +
-    '                    xAxis: {\n' +
-    '                        data: [\'衬衫\', \'羊毛衫\', \'雪纺衫\', \'裤子\', \'高跟鞋\', \'袜子\'],\n' +
-    '                    },\n' +
-    '                    yAxis: {},\n' +
-    '                    series: [\n' +
-    '                        {\n' +
-    '                            name: \'销量\',\n' +
-    '                            type: \'bar\',\n' +
-    '                            data: [10, 20, 36, 10, 10, 20],\n' +
-    '                        },\n' +
-    '                    ],\n' +
+    '                    xAxis: [\'衬衫\', \'羊毛衫\', \'雪纺衫\', \'裤子\', \'高跟鞋\', \'袜子\'],\n' +
+    '                    series: [10, 20, 36, 10, 10, 20],\n' +
     '                }\n' +
     '            }\n' +
     '        },\n' +
     '        methods: {\n' +
     '            changeHandler(v) {\n' +
     '                if (v === 1) {\n' +
-    '                    this.chartOptions = {\n' +
-    '                        xAxis: {\n' +
-    '                            data: [\'衬衫1\', \'羊毛衫1\', \'雪纺衫1\', \'裤子1\', \'高跟鞋1\', \'袜子1\'],\n' +
-    '                        },\n' +
-    '                        yAxis: {},\n' +
-    '                        series: [\n' +
-    '                            {\n' +
-    '                                name: \'销量\',\n' +
-    '                                type: \'bar\',\n' +
-    '                                data: [100, 200, 300, 400, 500, 600],\n' +
-    '                            },\n' +
-    '                        ],\n' +
+    '                    this.chartOptions2 = {\n' +
+    '                        xAxis: [\'衬衫1\', \'羊毛衫1\', \'雪纺衫1\', \'裤子1\', \'高跟鞋1\', \'袜子1\'],\n' +
+    '                        series: [10, 20, 30, 40, 50, 60],\n' +
     '                    };\n' +
     '                } else if (v === 2) {\n' +
-    '                    this.chartOptions = {\n' +
-    '                        xAxis: {\n' +
-    '                            data: [\'衬衫2\', \'羊毛衫2\', \'雪纺衫2\', \'裤子2\', \'高跟鞋2\', \'袜子2\'],\n' +
-    '                        },\n' +
-    '                        yAxis: {},\n' +
-    '                        series: [\n' +
-    '                            {\n' +
-    '                                name: \'销量\',\n' +
-    '                                type: \'bar\',\n' +
-    '                                data: [600, 500, 500, 300, 200, 100],\n' +
-    '                            },\n' +
-    '                        ],\n' +
+    '                    this.chartOptions2 = {\n' +
+    '                        xAxis: [\'衬衫2\', \'羊毛衫2\', \'雪纺衫2\', \'裤子2\', \'高跟鞋2\', \'袜子2\'],\n' +
+    '                        series: [66, 55, 54, 30, 20, 10],\n' +
     '                    };\n' +
-    '                } else if ( v === 3) {\n' +
-    '                    this.chartOptions = {\n' +
-    '                        xAxis: {\n' +
-    '                            data: [\'成都\', \'北京\', \'上海\', \'深圳\', \'广州\', \'武汉\'],\n' +
-    '                        },\n' +
-    '                        yAxis: {},\n' +
-    '                        series: [\n' +
-    '                            {\n' +
-    '                                name: \'GDP\',\n' +
-    '                                type: \'bar\',\n' +
-    '                                data: [60000, 50000, 504440, 3444400, 20330, 10220],\n' +
-    '                            },\n' +
-    '                        ],\n' +
+    '                } else if (v === 3) {\n' +
+    '                    this.chartOptions2 = {\n' +
+    '                        xAxis: [\'成都\', \'北京\', \'上海\', \'深圳\', \'广州\', \'武汉\'],\n' +
+    '                        series: [99, 100, 90, 40, 10, 20],\n' +
     '                    };\n' +
     '                }\n' +
     '            }\n' +
     '        }\n' +
     '    }\n' +
-    '</script>\n' +
-    '\n' +
-    '<style scope>\n' +
-    '\n' +
-    '</style>'
+    '</script>';
 
 export {
     dialogDemoCode1,

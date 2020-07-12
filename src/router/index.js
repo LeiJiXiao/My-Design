@@ -10,6 +10,6 @@ export default {
             redirect: '/index',
         },
         { path: '/index', component: Home },
-        { path: '/list/:name', component: List, prop: true },
+        { path: '/list/:name', component: List, props: true },
     ]
 }

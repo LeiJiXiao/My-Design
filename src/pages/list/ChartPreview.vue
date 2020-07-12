@@ -24,14 +24,14 @@
             <div class="item">
                 <div class="demo-block">
                     <div style="padding: 20px">
-                        <el-select @change="changeHandler">
+                        <el-select :value="''" @change="changeHandler">
                             <el-option :value="1" label="默认1"></el-option>
                             <el-option :value="2" label="数据2"></el-option>
                             <el-option :value="3" label="数据3"></el-option>
                         </el-select>
                     </div>
                     <div class="source">
-                        <Chart :chartOptions="chartOptions" />
+                        <Chart :chartOptions="chartOptions2" />
                     </div>
                     <div class="mate" v-show="showCode2">
                             <pre v-highlightjs>
@@ -79,13 +79,26 @@
                             data: [10, 20, 36, 10, 10, 20],
                         },
                     ],
+                },
+                chartOptions2: {
+                    xAxis: {
+                        data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子'],
+                    },
+                    yAxis: {},
+                    series: [
+                        {
+                            name: '销量',
+                            type: 'bar',
+                            data: [10, 20, 36, 10, 10, 20],
+                        },
+                    ],
                 }
             }
         },
         methods: {
             changeHandler(v) {
                 if (v === 1) {
-                    this.chartOptions = {
+                    this.chartOptions2 = {
                         xAxis: {
                             data: ['衬衫1', '羊毛衫1', '雪纺衫1', '裤子1', '高跟鞋1', '袜子1'],
                         },
@@ -99,7 +112,7 @@
                         ],
                     };
                 } else if (v === 2) {
-                    this.chartOptions = {
+                    this.chartOptions2 = {
                         xAxis: {
                             data: ['衬衫2', '羊毛衫2', '雪纺衫2', '裤子2', '高跟鞋2', '袜子2'],
                         },
@@ -113,7 +126,7 @@
                         ],
                     };
                 } else if ( v === 3) {
-                    this.chartOptions = {
+                    this.chartOptions2 = {
                         xAxis: {
                             data: ['成都', '北京', '上海', '深圳', '广州', '武汉'],
                         },

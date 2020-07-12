@@ -6,7 +6,7 @@
                 <router-link to="/index" v-slot="{ href, route, navigate, isActive }">
                     <span class="nav-item rel" :class="{ 'active':isActive }" :href="href" @click="navigate" >首页</span>
                 </router-link>
-                <router-link to="/list" v-slot="{ href, route, navigate, isActive }">
+                <router-link to="/list/dialog" v-slot="{ href, route, navigate, isActive }">
                     <span class="nav-item rel" :class="{ 'active':isActive }" :href="href" @click="navigate" >组件</span>
                 </router-link>
             </div>

@@ -17,8 +17,7 @@
                 vis: true,
             }
         },
-        methods: {
-        }
+        methods: {}
     }
 </script>
 

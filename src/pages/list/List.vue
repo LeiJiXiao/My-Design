@@ -1,7 +1,7 @@
 <template>
     <div id="main">
         <Header></Header>
-        <div class="container">
+        <div class="wrap">
             <Menu :route="menuList"></Menu>
             <template v-if="name === 'dialog'">
                 <DialogPreview></DialogPreview>
@@ -30,7 +30,7 @@
         props: {
             name: {
                 type: String,
-                default() {
+                default () {
                     return 'dialog';
                 }
             }
@@ -40,9 +40,14 @@
         },
         data() {
             return {
-                menuList: [
-                    { to: '/list/dialog', name: 'dialog对话框' },
-                    { to: '/list/chart', name: 'chart图表' },
+                menuList: [{
+                        to: '/list/dialog',
+                        name: 'dialog对话框'
+                    },
+                    {
+                        to: '/list/chart',
+                        name: 'chart图表'
+                    },
                 ],
             }
         },
@@ -58,8 +63,12 @@
 </script>
 
 <style lang="scss" scoped>
-    .container{
-        position: relative;
+    .wrap {
+        display: flex;
+        padding: 0 10px;
+    }
 
+    .container {
+        flex: 1;
     }
 </style>

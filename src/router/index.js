@@ -1,6 +1,3 @@
-import Home from '@/pages/index/Home';
-import List from '@/pages/list/List';
-
 export default {
     mode: 'history',
     base: '/',
@@ -9,7 +6,7 @@ export default {
             path: '/',
             redirect: '/index',
         },
-        { path: '/index', component: Home },
-        { path: '/list/:name', component: List, props: true },
+        { path: '/index', component(resolve) {require(['@/pages/index/Home'], resolve)} },
+        { path: '/list/:name', component(resolve) {require(['@/pages/list/List'], resolve)}, props: true },
     ]
 }

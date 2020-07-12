@@ -5,6 +5,6 @@ export default {
     base: '/',
     routes: [
         { path: '/index', component: Home },
-        { path: '/list', component: List },
+        { path: '/list/:name', component: List, prop: true },
     ]
 }
